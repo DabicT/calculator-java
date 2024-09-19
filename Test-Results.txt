@@ -23,6 +23,6 @@ public class CalculatorTest {
 @Test
     public void testViseOperacija() {
         String result = Calculator.Run("2+3*4-6/2");
-        assertEquals("11.0", result); // Expected result is 11.0
+        assertEquals("11.0", result); 
     }
 }
