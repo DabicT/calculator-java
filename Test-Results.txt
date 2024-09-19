@@ -17,7 +17,7 @@ Zaključak je da kalkulator funkcioniše dobro u većini scenarija, ali bi prika
 
 Jedinični test metode Calculate :
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals; 
 public class CalculatorTest { 
 @Test
