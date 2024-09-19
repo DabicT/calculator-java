@@ -1,0 +1,28 @@
+Izveštaj o Black Box Testiranju Kalkulatora
+Tokom testiranja kalkulatora bez uvida u njegovu unutrašnju logiku, došla sam do sledećih zaključaka:
+•	Rukovanje velikim brojevima
+Kalkulator bez problema radi s velikim brojevima.
+•	Rukovanje negativnim brojevima
+Kalkulator ispravno obrađuje negativne brojeve.
+•	Unos samo jednog broja
+Kada unesete samo jedan broj, bez operacije, kalkulator jednostavno vraća taj isti broj kao rezultat.
+•	Unos broja i operacije bez drugog broja
+Ako unesete broj i operaciju, ali ne i drugi broj, kalkulator od vas traži da unesete drugi broj kako bi mogao završiti operaciju. Nakon toga ispravno prikazuje rezultat.
+•	Deljenje sa nulom
+Prilikom pokušaja deljenja sa nulom, kalkulator prikazuje prilično dugu poruku umesto jednostavne greške tipa „ERROR“. Bilo bi korisnije da je poruka kraća i jasnija.
+•	Više operacija u jednom izrazu
+Kalkulator pravilno obrađuje složene izraze sa više operacija u jednom redu, i to poštujući prioritet računskih operacija
+Zaključak je da kalkulator funkcioniše dobro u većini scenarija, ali bi prikaz poruka o greškama, naročito kod deljenja sa nulom, mogao biti jasniji i sažetiji.
+
+
+Jedinični test metode Calculate :
+
+import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals; 
+public class CalculatorTest { 
+@Test
+    public void testViseOperacija() {
+        String result = Calculator.Run("2+3*4-6/2");
+        assertEquals("11.0", result); // Expected result is 11.0
+    }
+}
